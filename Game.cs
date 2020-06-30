@@ -36,13 +36,13 @@ namespace ConsoleGame
       switch (key)
       {
         case "LeftArrow":
-          return 'L';
+          return '<';
         case "RightArrow":
-          return 'R';
+          return '>';
         case "UpArrow":
-          return 'U';
+          return '^';
         case "DownArrow":
-          return 'D';
+          return 'v';
         default:
           return '<';
       }
