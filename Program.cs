@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 
 namespace ConsoleGame
 {
@@ -15,7 +15,7 @@ namespace ConsoleGame
       char cursor = '<';
       int characterRow = rows / 2;
       int characterCol = cols / 2;
-      char fruit = '*';
+      char fruit = '@';
       int fruitRow = rand.Next(1, rows);
       int fruitCol = rand.Next(1, cols);
       int score = 0;
@@ -34,10 +34,10 @@ namespace ConsoleGame
         Console.Write(fruit);
 
         // Capture user input
-        ConsoleKeyInfo dki = Console.ReadKey(false);
+        ConsoleKeyInfo cki = Console.ReadKey(false);
         
         // End game if Q is pressed
-        if (dki.Key == ConsoleKey.Q)
+        if (cki.Key == ConsoleKey.Q)
         {
           Console.Clear();
           Console.SetCursorPosition(0, 0);
@@ -47,7 +47,7 @@ namespace ConsoleGame
 
         // Change character position based on key
         // Uses UpdatePosition()
-        string key = dki.Key.ToString();
+        string key = cki.Key.ToString();
         int colChange = 0;
         int rowChange = 0;
         Game.UpdatePosition(key, out colChange, out rowChange);
